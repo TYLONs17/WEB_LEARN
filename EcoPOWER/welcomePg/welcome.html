@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <style>
+          body {
+            font-family: "proxima-nova", sans-serif;
+          }
+        
+          .container-fluid {
+            padding: 0;
+          }
+        
+          .container {
+            max-width: 800px;
+          }
+        
+          .content-page h1,
+          .content-page h2,
+          .content-page h3,
+          .content-page h4 {
+            margin: 0;
+            padding: 20px 0 10px 0;
+          }
+        
+          .content-page .row {
+            padding: 30px 0 40px 0;
+          }
+        
+          .content-page h2 {
+            color: #333333;
+            font-size: 30px;
+          }
+        
+          .content-page p {
+            color: #333333;
+            font-size: 14px;
+            padding-bottom: 10px;
+          }
+        
+          .content-page a {
+            color: #000;
+            font-weight: 600;
+          }
+        
+          .content-page .hero {
+            height: 250px;
+            background-image: url("https://systmapp-temp.s3.amazonaws.com/about/header-background.jpg");
+            /*url("/images/headers/header-background.jpg");*/
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
+        
+          .content-page .hero h1 {
+            color: #fff;
+            font-size: 48px;
+          }
+        
+          .content-page .hero p {
+            color: #ebf0f5;
+            font-size: 14px;
+          }
+        
+          .stats {
+            background: #f0f0f0;
+          }
+        
+          .stats .stats-value {
+            font-size: 60px;
+            display: block;
+            text-align: center;
+          }
+        
+          .stats .stats-label {
+            font-size: 20px;
+            display: block;
+            text-align: center;
+          }
+        </style>
+    </head>
+    
+    <body>
+        <section class="content-page">
+          <div class="container-fluid">
+            
+          <section class="hero">
+            <div class="container">
+              <div class="row">
+                <h1 class="text-uppercase">Welcome to Eco Power Solutions!</h1>
+                <span class="text">
+                  <p>            
+                    We are your one-stop shop for all your energy needs. We specialize in selling and installing renewable energy solutions that are both cost-effective and environmentally friendly. Our team of experienced professionals is dedicated to helping you find the best solution for your home or business.
+
+                    We offer a wide range of products and services, including solar panels, wind turbines, geothermal systems, and more. We also provide energy efficiency audits and energy management services to help
+
+
+                    Thank you for choosing us for your business needs. If you have any questions or concerns, please don't hesitate to reach out and contact us. 
+                  </p>
+                  <p>
+                    We look forward to serving you soon!
+                  </p>
+                </span>
+              </div>
+            </div>
+          </section>
+          
+          <section class="mission">
+            <div class="container">
+              <div class="row">
+                <h2 class="text-uppercase">Our Mission</h2>
+                <span class="text">
+                    <p>Seven out of eight people are still hesitant about transitioning to solar power. At [Solar Power Business Name], we want to empower you to embrace renewable energy, save money, and feel confident in your decision. We are here to support you every step of the way. Our carefully curated selection of products and services from reputable vendors is just a click away.</p>
+
+                    <p>It&rsquo;s a personal journey. Our founder, who is passionate about sustainability, experienced the same concerns you may have today - the uncertainty of investing in solar power without much knowledge and unfamiliarity with providers. You can read about their transformational journey <a href="http://blog.solarpowerbusiness.com/post/our-sustainability-story" target="_blank">here</a>.</p>
+
+                    <p>Our commitment to innovation drives us to utilize cutting-edge technology, including data science and machine learning, to assist you in making informed decisions. Check out our <a href="http://blog.solarpowerbusiness.com/post/how-we-leverage-data-science-for-solar-solutions" target="_blank">blog post</a> for more insights.</p>
+
+                    <p>In our research and development efforts, we are exploring the implementation of artificial intelligence chatbots that speak your language - plain English. These bots will be your knowledgeable guides in finding the perfect solar solution for your needs.</p>
+
+                    <p>We value your feedback. If you have any suggestions or ideas to enhance your solar power buying experience, we are all ears.</p>
+                </span>
+              </div>
+            </div>
+          </section>
+            
+          <section class="stats">
+            <div class="container">
+              <div class="row" id="stats-row">
+                <div class="">
+                  <span class="stats-value" data-start="0" data-end="8">0</span>
+                  <span class="stats-label">Days</span>
+                </div>
+                <div class="">
+                  <span class="stats-value" data-start="0" data-end="14463">0</span>
+                  <span class="stats-label">Users</span>
+                </div>
+                <div class="">
+                  <span class="stats-value" data-start="0" data-end="24209">0</span>
+                  <span class="stats-label">Searches</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        </div>
+        </section>
+        
+        
+        <br><br><br><br><br><br><br>
+        
+        
+        <script>
+          try{Typekit.load({ async: true });}catch(e){};
+        
+        var countAnimation = (function () {
+          var options = {
+            useEasing : true, 
+            useGrouping : true, 
+            separator : ',', 
+            decimal : '.', 
+            prefix : '', 
+            suffix : '' 
+          };
+          
+          var startCount = function () {  
+            $( ".stats-value" ).each(function( index, element ) {
+              var queueCountAnimation = new countUp(element, $(element).data("start"), $(element).data("end"), 0, 1, options);
+              queueCountAnimation.start();
+            });
+          };
+        
+          return {
+            startCount: startCount
+          };
+        
+        })();
+        
+        var waypoint = new Waypoint({
+          element: document.getElementById('stats-row'),
+          handler: function(direction) {    
+            if (direction === 'down') {
+              countAnimation.startCount()
+            }
+          },
+          offset: '100%'
+        })
+        </script>
+    </body>
+
+</html>

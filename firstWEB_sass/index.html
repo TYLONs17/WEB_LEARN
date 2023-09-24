@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass CSS SPEED RUN</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="#">Remember <span>That</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="images/menu-circ-sq-O.svg" alt="Open Navigation">
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/menu-circ-sq-C.svg" alt="Close Navigation">
+                <ul class="primary-nav">
+                    <li class="current"><a href="#">Home</a>></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+
+                <ul class="secondary-nav">
+                    <li><a href="#">Contact</a></li>
+                    <li class="go-premium-cta"><a href="#">Go Premium</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <p class="subhead">She's Pretty &amp; Greedy</p>
+                <h1>A slipleton's point of view</h1>
+
+                <div class="hero-cta">
+                    <a href="#" class="primary-cta">Try for free</a>
+                    <a href="#" class="watch-video-cta">
+                        <img src="images/video-YT.svg" alt="Watch a video">Watch a video
+                    </a>
+                </div>
+            </div>
+            
+            <img src="images/web-page-browser-window.svg" class="hero-image" alt="illustration">
+        </div>
+    </section>
+
+
+    <section class="features-section">
+        <div class="container">
+            <ul class="features-list">
+                <li>Unlimited Tasks</li>
+                <li>Important Tasks Reminders</li>
+                <li>Real Time Conviction Upon Task Completions</li>
+                <li>Anti-Social Behavioral Documentation</li>
+                <li>Super Collaborative Hand Holding</li>
+                <li>Other Awesome Features</li>
+            </ul>
+
+            <img src="images/Darkness_for_stars.jpeg" alt="A certain amount of darkness is needed to see the stars">
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/yes_kid.jpeg" alt="Person">
+
+                    <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veritatis natus earum ipsum totam, eius illo nam quas, laudantium eveniet unde molestiae ipsa laborum vero enim possimus asperiores? Accusamus, placeat.</blockquote>
+                    <cite>- JALESnotJAQUE</cite>
+                </li>
+                <li>
+                    <img src="images/yes_kid.jpeg" alt="Person">
+
+                    <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veritatis natus earum ipsum totam, eius illo nam quas, laudantium eveniet unde molestiae ipsa laborum vero enim possimus asperiores? Accusamus, placeat.</blockquote>
+                    <cite>- JALESnotJAQUE</cite>
+                </li>
+                <li>
+                    <img src="images/yes_kid.jpeg" alt="Person">
+
+                    <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veritatis natus earum ipsum totam, eius illo nam quas, laudantium eveniet unde molestiae ipsa laborum vero enim possimus asperiores? Accusamus, placeat.</blockquote>
+                    <cite>- JALESnotJAQUE</cite>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-left">
+                <h2>Contact</h2>
+
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Who values your name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10">YO! YU GUD?</textarea>
+
+                    <input type="submit" class="send-message-cta" value="Send message">
+                </form>
+            </div>
+            <div class="contact-right">
+                <div>
+                    <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=-29.11804953302493~26.207284927368164&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+                    </iframe>
+                    <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+                       <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=-29.11804953302493~26.207284927368164&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+                       <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=-29.11804953302493~26.207284927368164&amp;sty=r&amp;lvl=16&amp;rtp=~pos.-29.11804953302493_26.207284927368164____&amp;FORM=MBEDLD">Get Directions</a>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta')
+            nav = document.querySelector('nav')
+            mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+
+    </script>
+</body>
+</html>

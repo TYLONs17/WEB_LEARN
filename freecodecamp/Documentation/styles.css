@@ -1,0 +1,115 @@
+html {
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  display: block;
+  margin: 8px;
+}
+
+#navbar {
+  display: block;
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+
+#navbar header {
+  background-color: grey;
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  display: block;
+  list-style-type: disc;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+
+  display: list-item;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navbar a:hover {
+  background-color: #ccc
+}
+
+#navbar a:active {
+  background-color: grey
+}
+
+
+/* for code containers */
+.code-container_style {}
+
+code {
+  display: block;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+
+  white-space: pre-line;
+  word-wrap: normal;
+
+  font-family: TimesNew Roman;
+}
+
+main {
+  position: absolute;
+  margin-left: 290px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+/* media query for smaller screens */
+@media (max-width: 768px) {
+  .code-container {
+      padding: 5px; 
+      font-size: 11px; 
+  }
+}
+
+/* media query for regular sized devices (laptops, desktops) */
+
+@media (min-width: 1024) {
+
+  #navbar {
+      
+  }
+}
+
+

@@ -1,0 +1,140 @@
+.SUBSCRIBE {
+    background-color: rgb(204, 33, 33);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: opacity 0.15s;
+}
+
+.SUBSCRIBE:hover {
+    opacity: 0.8;
+}
+
+.SUBSCRIBE:active {
+    opacity: 0.4;
+}
+
+.JOIN {
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+    border-radius: 3px;
+    padding: 9px 9px;
+    cursor: pointer;
+}
+
+.JOIN:hover {
+    background-color: blue;
+    color: white;
+    opacity: 0.8;
+}
+
+.JOIN:active {
+    opacity: 0.4;
+}
+
+.Tweet {
+    background-color: rgb(18, 111, 199);
+    color: white;
+    border: none;
+    border-radius: 32px;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 100px;
+}
+
+.Tweet:hover {
+    opacity: 0.8;
+}
+
+.Tweet:active {
+    opacity: 0.4;
+}
+
+.p2 * {
+    padding: 7px 5px;
+    cursor: pointer;
+}
+
+.p2 a:hover {
+    color: red;
+}
+
+.p2 button:hover {
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.stretch {
+    color: green;
+    padding: 10px 10px;
+    border: none;
+    transition: 0.89s;
+    cursor: pointer;
+}
+
+.stretch:hover {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    background-color: green;
+}
+
+.shadow {
+    color: white;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    transition: 0.45s;
+    padding: 10px 10px;
+}
+
+.shadow:hover {
+    box-shadow: 1vmax,9vmax red;
+}
+
+.p3 {
+    padding: 5px 5px;
+    transition: 0.45s;
+}
+
+.one {
+    color: red;
+}
+
+.one:hover {
+    background-color: red;
+    color: white;
+}
+
+.two {
+    color: green;
+}
+
+.two:hover {
+    background-color: green;
+    color: white;
+}
+
+.three {
+    color: blue;
+}
+
+.three:hover {
+    background-color: blue;
+    color: white;
+}
+
+.p3 button:hover {
+    padding-left: 21px;
+    padding-right: 21px;
+    border: solid transparent;
+    border-radius: 3px;
+}

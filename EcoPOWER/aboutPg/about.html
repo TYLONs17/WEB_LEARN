@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - EcoPower Solutions</title>
+        <style>* { padding: 0; margin: 0; }
+body { font-family: 'Roboto', sans-serif; background: #333; font-size: 40;}
+
+h1{ text-transform: uppercase; color: white; font-weight: 600; }
+h2{ text-transform: uppercase; color: #999; font-weight: 600; font-size: 30px;}
+
+.menu { background: #222; display: inline-block; float: left;
+	padding: 30px 20px 20px 20px; height: 100vh; width: 100px; overflow: hidden; }
+
+.menu .menubutton { width: 40px; margin: auto;  }
+.menu .menubutton:hover { opacity: 0.8; cursor: pointer; }
+.menu .menubutton .blok { width: 100%; height: 5px; background: white; margin-bottom: 5px; }
+
+.menu ul { list-style: none; padding-left: 0; margin-top: 40px; }
+
+.menu ul li { padding: 20px 20px 20px 85px; background-image: url('https://frustyteam.nl/img/anonymous.png');
+background-repeat: no-repeat;
+background-size: 40px;
+background-position: left 27px center;
+opacity: 0.7;
+transition: opacity 0.3s ease;
+}
+.menu ul li.explore { background-image: url('https://files.samvdhwebdev.nl/codepen/compass.png'); }
+.menu ul li.project { background-image: url('https://files.samvdhwebdev.nl/codepen/edit.png') }
+.menu ul li.links {  background-image: url('https://files.samvdhwebdev.nl/codepen/link.png'); }
+.menu ul li.newsletter {  background-image: url('https://files.samvdhwebdev.nl/codepen/email.png'); } 
+.menu ul li.listActive { opacity: 1; }
+.menu ul li:hover{ cursor: pointer; opacity: 1; }
+
+.menu ul li .menutekstwrapper { height: 20px; }
+.menu ul li a { text-decoration: none; color: white; font-weight: bold; font-size: 20px; text-transform: uppercase;  letter-spacing: 2px;
+	display: none; 
+	position: relative;
+	white-space: nowrap;
+	letter-spacing: 4px;
+}
+.menu ul li a:after{  content: ''; width: 100%; height: 85%; top: 0; left: 0; position: absolute; border-bottom: 2px solid white; opacity: 0;  		transition: all .2s ease;
+}
+.menu ul li a:hover:after{  opacity: 1; height: 100%;  transition: all 0.3s ease; }
+
+.content { display: block; height: 111vh; vertical-align: top;}
+.content .content-wrapper { float:left; padding: 30px; }
+
+.name { position: fixed; right: 10px; bottom: 10px; }
+.name a { color: #eee; text-decoration: none; transition: color 0.3s ease; 
+text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);}
+.name a:hover { color: #888; }
+
+
+.block{ height: 300px; background: yellow; }</style>
+    </head>
+    
+    <body>
+        <section>
+            <div class="menu">
+            	<div class="menubutton">
+            		<div class="blok een"></div>
+            		<div class="blok twee"></div>
+            		<div class="blok drie"></div>
+            	</div>
+            	<ul class="">
+            		<li class="explore">
+            		    <div class="menutekstwrapper"><a class="menutekst" href="https://samvdh.nl" target="_blank" >Explore</a></div>
+            		</li>
+            		<li class="project">
+            		    <div class="menutekstwrapper"><a class="menutekst" href="https://samvdh.nl" target="_blank" >Projects</a></div>
+            		</li>
+            		<li class="links">
+            		    <div class="menutekstwrapper"><a class="menutekst" href="https://samvdh.nl" target="_blank" >Links</a></div>
+            		</li>
+            		<li class="newsletter">
+            		    <div class="menutekstwrapper"><a class="menutekst" href="https://samvdh.nl" target="_blank" >Contact</a></div>
+            		</li>
+            	</ul>
+            </div>
+            <div class="content">
+            	<div class="content-wrapper">
+            		<h1>Learn About Us</h1>
+            	</div>
+            </div>
+
+            <div class="name"><a href="https://samvdh.nl" target="_blank">Return to homepage</a></div>
+        </section>
+        
+        <section>
+        </section>
+        
+        <section>
+        </section>
+    
+        <script>
+            var menuWrapper = $('.menu');
+var menuButton = $('.menu .menubutton');
+var menuItems = $ ('.menu ul li a');
+var listItem = $('.menu ul li');
+
+var tekstSpeed = 350;
+var sizeSpeed = 300;
+
+
+// this will toggle all the menu items at the same time,
+toggleAll = function(){
+		if(!menuWrapper.hasClass('toggled')){
+// 	 picks the longes element in width and scale the div around that to that size
+			var width = 0;
+			menuItems.each(function(){
+				var thisWidth = $(this).width();
+				if(thisWidth > width){
+					width = thisWidth;
+				}
+			});
+			width = width + 100;
+		}
+		else{
+			var width = 100;
+		}
+		menuWrapper.animate({width: width}, sizeSpeed);	
+		
+// 	toggles the items that have not been toggled yet, and removes the clicktoggled class from the already toggled items.
+		menuItems
+			.not($('.menu ul li a.clicktoggled'))
+			.animate({opacity: 'toggle'}, tekstSpeed);
+		menuWrapper.toggleClass('toggled');
+		menuItems.removeClass('clicktoggled');
+		listItem.removeClass('listActive');
+}
+
+// when the icons are clicked, one will pop open, the otherone will close.
+singleClicked = function(){
+	if(!menuWrapper.hasClass('toggled')){
+		
+// 		makes the wrapper the same widht of the new clicked item.
+		if(!$('a', $(this)).hasClass('clicktoggled')){
+			var newLength = $('a', $(this)).width();
+			var newWidth = newLength + 100;
+		}
+		else{
+			var newWidth = 100;
+		}		
+		menuWrapper.animate({width: newWidth}, sizeSpeed);
+		
+// 	when clicked it wil toggle the clicked list item and will close the already toggled one.
+		$('a', $(this))
+			.animate({opacity: 'toggle'}, tekstSpeed)
+			.toggleClass('clicktoggled');
+		$('a.clicktoggled', listItem.not(this)).each(function(){
+				$(this)
+					.removeClass('clicktoggled')
+					.animate({opacity: 'toggle'}, tekstSpeed);
+		});		
+		$((this))
+			.toggleClass('listActive');
+		listItem.not(this).each(function(){
+				$(this)
+					.removeClass('listActive')
+		});
+	}
+}
+
+
+//  activate  functions
+
+setTimeout(function() { toggleAll(); }, 1000);
+menuButton.click(toggleAll);
+listItem.click(singleClicked);
+$(document).keyup(function(e) {
+		if (e.keyCode == 27) { // escape key maps to keycode `27`
+			if(menuWrapper.hasClass('toggled')){
+				toggleAll();
+			}
+	}
+});
+$('.content').click(function(){
+	if(menuWrapper.hasClass('toggled')){
+		toggleAll();
+	}																	
+});
+
+// This code has been written by Sam van der heijden, https://samvdh.nl
+
+        </script>
+    </body>
+</html>

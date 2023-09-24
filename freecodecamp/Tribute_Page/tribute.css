@@ -1,0 +1,25 @@
+#image-div {
+  display: flex;
+  justify-content: center; /* Center the contents horizontally */
+  align-items: center; /* Center the contents vertically */
+  position: relative;
+  /* You may want to specify a max-width for the #image-div itself if needed */
+}
+
+#image {
+  display: block;
+  max-width: 100%; /* Resizes the image to fit its container */
+  height: auto; /* Maintains the image's aspect ratio */
+}
+
+#main {
+  background-color: #000000;
+  color: #00FFFF;
+}
+
+#title {
+  background-color: grey;
+  border-radius: 20px;
+  text-align: center;
+}
+
