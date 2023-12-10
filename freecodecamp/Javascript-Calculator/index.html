@@ -8,29 +8,33 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+  <div id="header">
+    <h1>Javascript Calculator</h1>
+    <p class="say-my-name">by <a href="https://github.com/JALES25"><em>TYLONs17&trade;</em></a></p>
+  </div>
+  <section>
     <div id="calculator">
-        <div id="display">
-          0
-        </div>
-        <div id="input-buttons">
-          <button class="clear">AC</button>
-          <button class="operator">/</button>
-          <button class="operator">X</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button class="operator">-</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button class="operator">+</button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button class="equals">=</button>
-          <button class="zero">0</button>
-          <button class="dot">.</button>
-        </div>
-    </div>      
+      <div id="display">0</div>
+      <div id="input-buttons">
+        <button class="clear" onclick="clearDisplay()">AC</button>
+        <button class="operator" onclick="addToDisplay('/')">/</button>
+        <button class="operator" onclick="addToDisplay('*')">X</button>
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('9')">9</button>
+        <button class="operator" onclick="addToDisplay('-')">-</button>
+        <button onclick="addToDisplay('4')">4</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('6')">6</button>
+        <button class="operator" onclick="addToDisplay('+')">+</button>
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('3')">3</button>
+        <button onclick="calculate()" class="equals">=</button>
+        <button onclick="addToDisplay('0')" class="zero">0</button>
+        <button onclick="addDecimal()">.</button>
+      </div>
+    </div> 
+  </section>     
 </body>
 </html>
