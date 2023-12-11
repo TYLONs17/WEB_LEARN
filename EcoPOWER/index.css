@@ -6,7 +6,8 @@ body {
   line-height: 30px;
   background-color: #0c0f15;
   overflow-x:hidden;
-  color: #ababab; }
+  color: #ababab;
+}
 
 ::-webkit-scrollbar {
     width: 10px;

@@ -1,0 +1,120 @@
+body {
+    background: #242424;
+    height: 100vh;
+  }
+  
+  section {
+    background: #333;
+    color: white;
+    display: grid;
+    grid-template-rows: 2fr 3fr 1fr;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  #header {
+    text-align: center;
+    color: white;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  .say-my-name {
+    margin-top: 0.5em;
+    color: #ccc;
+    font-style: italic;
+  }
+  
+  .say-my-name:hover {
+    cursor: pointer;
+    color: lightskyblue;
+  }
+  
+  .say-my-name:active {
+    color: blue;
+  }
+  
+  .b-s {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  #break-label,
+  #session-label {
+    text-align: center;
+  }
+  
+  #break-length,
+  #session-length {
+    font-size: 1.5em;
+    padding: 1em;
+  }
+  
+  #timer-label {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+  }
+  
+  #time-left {
+    font-size: 3em;
+  }
+  
+  #start_stop,
+  #reset {
+    display: inline-block;
+    margin-top: 10px;
+    padding: .8em;
+    background-color: #4caf50;
+    width: 25%;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+  }
+  
+  #start_stop:hover,
+  #reset:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  #start_stop:active,
+  #reset:active {
+    background: lime;
+  }
+  
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  button:active {
+    background-color: green;
+  }
+  
+  

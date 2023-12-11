@@ -58,11 +58,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10px;
   }
 
   #display {  
-    font-size: 4em;
+    font-size: 2em;
     margin-bottom: 20px;
   }
 
@@ -74,7 +74,7 @@
   }
 
   .drum-pad {
-    font-size: 3em;
+    font-size: 1.5em;
     display: inline-block;
     padding: 2em;
     margin: 10px;
@@ -108,7 +108,7 @@
       font-size: 1em; 
     }
     #display {  
-      font-size: 2    em;
+      font-size: 2em;
       margin-bottom: 20px;
     }
   }

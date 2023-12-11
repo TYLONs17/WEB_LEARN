@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 + 7 Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h1>17 + 7 Clock</h1>
+        <p class="say-my-name">
+          by <a href="https://github.com/JALES25"><em>TYLONs17&trade;</em></a>
+        </p>
+    </div>
+    
+    <section>
+      <div class="b-s">
+        <div id="session-label">
+          <h4>Session Length</h4>
+          <button id="session-decrement">-</button>
+          <span id="session-length">17</span>
+          <button id="session-increment">+</button>
+          <hr/>
+        </div>
+        <div id="break-label">
+          <h4>Break Length</h4>
+          <button id="break-decrement">-</button>
+          <span id="break-length">7</span>
+          <button id="break-increment">+</button>
+          <hr/>
+        </div>
+      </div>
+      <div id="timer-label">
+        <h2>Session</h2>
+        <span id="time-left">17:00</span>
+        <div >
+          <span id="start_stop">start/stop</span>
+          <span id="reset" onclick="reset()">Reset</span>
+            <!--       
+                <button id="start_stop">start/stop</button>
+                <button id="reset" onclick="reset()">Reset</button> 
+            -->
+        </div>
+      </div>
+      <audio id="beep" src="assets/beep.mp3" type="audio/mp3"></audio>
+      <!-- <audio id="beep" src="https://pixabay.com/sound-effects/bleep-41488/" type="audio/mp3"></audio> -->
+    </section>    
+</body>
+</html>
