@@ -25,3 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(alternateRole, 3000);
 });
 
+
+//Pop up image & Video
+document.getElementById('pulse-in').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('bigImage').src = './assets/TYLONs.jpg';
+
+    setTimeout(function() {
+      document.getElementById('bigImage').style.display = 'none';
+      document.getElementById('bigVideo').style.display = 'block';
+    }, 5000); 
+});
+
+document.getElementById('overlay').addEventListener('click', function() {
+    this.style.display = 'none';
+    document.getElementById('bigImage').style.display = 'block';
+    document.getElementById('bigVideo').style.display = 'none';
+});

@@ -64,6 +64,15 @@
     <section id="profile" class="hero">
       <div class="section__pic-container img-card">
         <img id="pulse-in" src="./assets/profile-pic.png" alt="profile picture" />
+
+        <div id="overlay" >
+          <img id="bigImage" src="" alt="big image" />
+          <video id="bigVideo" style="display: none; width: 90vw; height: 90vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" autoplay muted loop>
+            <source src="./assets/TYLONs-vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
         <svg style="display: none;"> 
           <defs>
             <filter id="noise">
@@ -354,30 +363,30 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">JavaScript Calculator</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/TYLONs17/WEB_LEARN/tree/main/freecodecamp/Javascript-Calculator'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='http://htmlpreview.github.io/TYLONs17/WEB_LEARN/blob/main/freecodecamp/Javascript-Calculator/index.html'"
-              >
-                Live Demo
-              </button>
+              <h2 class="experience-sub-title project-title">JavaScript Calculator</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/TYLONs17/WEB_LEARN/tree/main/freecodecamp/Javascript-Calculator'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='http://htmlpreview.github.io/TYLONs17/WEB_LEARN/blob/main/freecodecamp/Javascript-Calculator/index.html'"
+                >
+                  Live Demo
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-5.png"
-                alt="Project 5"
-                class="project-img"
-              />
-            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/project-5.png"
+                  alt="Project 5"
+                  class="project-img"
+                />
+              </div>
             <h2 class="experience-sub-title project-title">Random Quote</h2>
             <div class="btn-container">
               <button

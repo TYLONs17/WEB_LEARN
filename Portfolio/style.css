@@ -19,7 +19,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-image: url('./assets/pexels-photo-414171.jpeg');
   background-size:cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -54,6 +54,7 @@ body:after {
   z-index: -97;
 }
 
+
 @-webkit-keyframes slidein {
   from {background-position: top; background-size:3000px; }
   to {background-position: -100px 0px; background-size:2750px;}
@@ -86,9 +87,14 @@ nav,
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  opacity: 0.8;
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  z-index: 99;
+  background: rgba(49, 47, 47, 0.1);
 }
 
 .nav-links {
@@ -254,6 +260,7 @@ section {
   display: flex;
 }
 
+
 /* PROFILE SECTION */
 
 #profile {
@@ -333,6 +340,30 @@ section {
   }
 }
 
+#overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(43, 216, 216, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#bigImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 2rem;
+}
+
 
 
 .section__text {
@@ -370,6 +401,11 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+}
+
+.icon:hover {
+  filter: brightness(0.5) sepia(1) hue-rotate(90deg) saturate(5) contrast(0.8);
+  transform: scale(1.2);
 }
 
 /* BUTTONS */
@@ -567,6 +603,7 @@ section {
   justify-content: space-around;
 }
 
+
 article {
   display: flex;
   width: 10rem;
@@ -589,6 +626,12 @@ article .icon {
   background: rgb(250, 250, 250);
 }
 
+.color-container:hover {
+  border-color: var(--color-1);
+  background: rgba(250, 250, 250, 0.5);
+  box-shadow: #17141d 0px 0px 20px 0px;
+}
+
 .project-img {
   border-radius: 2rem;
   width: 90%;
@@ -602,7 +645,11 @@ article .icon {
 
 .project-btn {
   color: black;
-  border-color: rgb(163, 163, 163);
+  border-color: rgb(102, 101, 101);
+}
+
+.project-btn:hover {
+  border-color: var(--color-1);
 }
 
 /* CONTACT */
