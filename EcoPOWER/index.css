@@ -1,3 +1,9 @@
+:root {
+  --faint-gray: #ababab;
+  --faint-pink: #FA6862;
+  --faint-blue: #1979d3;
+  --red-1: #f90a23;
+}
 
 body {
   font-family: "Libre Baskerville", serif;
@@ -6,13 +12,12 @@ body {
   line-height: 30px;
   background-color: #0c0f15;
   overflow-x:hidden;
-  color: #ababab;
+  color: skyblue;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
     background-color: #F5F5F5;
-  
 }
 
 ::-webkit-scrollbar-thumb {
@@ -27,11 +32,11 @@ body {
 
 .heading-page
 {
-      text-transform: uppercase;
-    font-size: 43px;
-    font-weight: bolder;
-    letter-spacing: 3px;
-    color: white;
+  text-transform: uppercase;
+  font-size: 43px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  color: red;
 }
 a {
   color: inherit;
@@ -60,11 +65,11 @@ p {
  * Selection color
  */
 ::-moz-selection {
-  background-color: #FA6862;
+  background-color: var(--faint-pink);
   color: #fff; }
 
 ::selection {
-  background-color: #FA6862;
+  background-color: var(--faint-pink);
   color: #fff; }
 
 /*
@@ -105,7 +110,7 @@ textarea, label {
     outline: 0 none; }
 
 .btn-primary {
-  background-color: #FA6862;
+  background-color: var(--faint-pink);
   border: 0;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
@@ -154,7 +159,7 @@ textarea, label {
 
 .primary,
 .link:hover {
-  color: #FA6862; }
+  color: var(--faint-pink); }
 
 .no-gutter {
   margin-left: 0;
@@ -185,7 +190,7 @@ textarea, label {
   justify-content: space-between; }
 
 .nicescroll-cursors {
-  background: #FA6862 !important; }
+  background: var(--faint-pink) !important; }
 
 .preloader {
   bottom: 0;
@@ -203,7 +208,7 @@ textarea, label {
     display: none; }
 
 .loading-mask {
-  background-color: #FA6862;
+  background-color: var(--faint-pink);
   height: 100%;
   left: 0;
   position: absolute;
@@ -250,6 +255,9 @@ textarea, label {
 .mt20{margin-top:20px;}
 .site-wrapper {
   border-top: 4px solid #ff0037; }
+
+.site-bottom-wrapper {
+  border-bottom: 4px solid #ff0037; }
 
 .page-close {
   font-size: 30px;
@@ -305,7 +313,7 @@ textarea, label {
       width: 96px;
       bottom: 14px; }
     .section-title h3::after {
-      background-color: #FA6862;
+      background-color: var(--faint-pink);
       width: 73px; }
   .section-title.light h3 {
     color: #fff; }
@@ -342,6 +350,10 @@ textarea, label {
 }
 
 /* End of container */
+.hexagon-menu {
+  max-width: 1340px;
+}
+
 .hexagon-item {
   cursor: pointer;
   width: 200px;
@@ -536,6 +548,8 @@ textarea, label {
     width: 66.66666667%;
 }
 }
+
+
 
 .hexagon-item:first-child {
     margin-left: 0;
